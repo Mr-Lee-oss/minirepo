@@ -19,6 +19,6 @@ from accountapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.account, name='account' ),
-    path('register/', views.register, name='register')
+    path('', views.account_pg, name='account' ),
+    # path('register/', views.register, name='register')
 ]

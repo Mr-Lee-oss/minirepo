@@ -1,1 +1,19 @@
-<html lang = "ko">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>등록</title>
+</head>
+<body>
+    <form action="/account/" method="GET"> <!-- 인덱스에서 가져옴 -->
+    <input type="submit" value="회원가입">
+
+
+    {% for value in result %}
+       id: {{ value.id }}
+       name: {{ value.name }}
+       password : {{value.password}}
+    {% endfor %}
+</form>
+</body>
+</html>
