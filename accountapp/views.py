@@ -12,7 +12,7 @@ def account_pg(request):
         return render(request, 'account_pg.html')
     #여기부터 회원 가입 데이터를 쌓는거
     elif request.method == 'POST':
-       #먼가 하는건가?
+       #이 것을 가지고 메시지를 나오게 할 수 있음
        res_data ={}
        # account db 변수 설정?
        new_user = account()
@@ -28,11 +28,11 @@ def account_pg(request):
 
 
        elif wcpassword1 != wcpassword2:
-           res_data['warning'] = '비밀번호 불일치'
+           res_data['error'] = '비밀번호 불일치'
            #messages.add_message(request, messages.warning, '비밀번호 불일치')
-           # messages.error(request, '비밀번호 불일치')
+           #messages.error(request, '비밀번호 불일치')
            # window.open(error, "비밀번호 불일치", "width=800,height=400");
-           messages.warning(request, '비밀번호 불일치')
+           #messages.warning(request, '비밀번호 불일치')
            #팝업 메시지가 안되서 다른 페이지로 이동하는것으로 또 함 이건 됨
            #return render(request, 'error.html')
 

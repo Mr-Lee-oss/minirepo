@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.account_pg, name='account' ),
     path('error/', views.error, name='error'),
+
     # path('register/', views.register, name='register')
 ]
