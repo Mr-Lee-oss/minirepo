@@ -10,11 +10,16 @@
 <!--    <form action = {% url 'register' % }  method="get">-->
         안녕 회원가입
     <p>  <input id="Username" type="text" name="Username" placeholder="사용자 이름" required></p>
-    <p>  <input id="password" type="password" name="password" placeholder="비밀번호" required></p>
+<!--        type을 password로 해야 동그라미 형식으로 보임-->
+    <p>  <input id="password1" type="password" name="password1" placeholder="비밀번호" required></p>
+        <p>  <input id="password2" type="password" name="password2" placeholder="비밀번호 확인" required></p>
+
     <p> <input type = "submit" value="회원가입"> </p>
+
 <!--    </form>-->
 </form>
 
 </div>
+
 </body>
 </html>

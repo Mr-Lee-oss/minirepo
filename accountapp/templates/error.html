@@ -1,19 +1,37 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>등록</title>
-</head>
-<body>
-    <form action="/account/" method="GET"> <!-- 인덱스에서 가져옴 -->
-    <input type="submit" value="회원가입">
+<!--<!DOCTYPE html>-->
+<!--<html lang="ko">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>에러</title>-->
+<!--</head>-->
+<!--<body>-->
 
+<!--&lt;!&ndash;        <script langauge="javascript">&ndash;&gt;-->
 
-    {% for value in result %}
-       id: {{ value.id }}
-       name: {{ value.name }}
-       password : {{value.password}}
+<!--&lt;!&ndash;             window.open("www.naver.com","비밀번호 불일치","width=800,height=400");&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </script>&ndash;&gt;-->
+<!--&lt;!&ndash;{% if messages %}&ndash;&gt;-->
+<!--&lt;!&ndash;<ul class="messages">&ndash;&gt;-->
+<!--&lt;!&ndash;    {% for message in messages %}&ndash;&gt;-->
+<!--&lt;!&ndash;    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--&lt;!&ndash;{% endif %}&ndash;&gt;-->
+<!--    암호 불일치-->
+<!--    </body>-->
+<!--</html>-->
+
+{% if messages %}
+
+<ul class="messages">
+
+    {% for message in messages %}
+
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+
     {% endfor %}
-</form>
-</body>
-</html>
+
+</ul>
+
+{% endif %}
